@@ -4,12 +4,13 @@
 > Sys.setlocale(locale = "ukrainian")
 [1] "LC_COLLATE=Ukrainian_Ukraine.1251;LC_CTYPE=Ukrainian_Ukraine.1251;LC_MONETARY=Ukrainian_Ukraine.1251;LC_NUMERIC=C;LC_TIME=Ukrainian_Ukraine.1251"
 
-> fileURL <- "http://data.gov.ua/file/152588/download?token=Nk14ZhWf"
-> download.file(fileURL, destfile = "data.xls", mode = "wb")
-trying URL 'http://data.gov.ua/file/152588/download?token=Nk14ZhWf'
-Content type 'application/vnd.ms-excel' length 324096 bytes (316 KB)
-downloaded 316 KB
-> data <- read.xlsx("data.xls", sheetIndex = 1, startRow=6, as.data.frame=TRUE, encoding = "UTF-8")
+> download.file("http://data.gov.ua/file/150973/download?token=Bku7XoUn", destfile = "data_1.xls", mode = "wb")
+trying URL 'http://data.gov.ua/file/150973/download?token=Bku7XoUn'
+Content type 'application/vnd.ms-excel' length 44032 bytes (43 KB)
+downloaded 43 KB
+
+
+> data <- read.xlsx("data_1.xls", sheetIndex = 1, startRow=6, as.data.frame=TRUE, encoding = "UTF-8")
 > head(data)
   X1 Інформація Про.надання.списків.для.нагородження. X42739 X01.12.1 надання..список..нагородження
 1  2 Інформація                Про проблемні питання   42739  01-12/2             проблема, питання
