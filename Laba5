@@ -1,0 +1,35 @@
+Ставимо пакет для роботи із html
+
+```r
+
+> install.packages("xml2")
+Installing package into ‘C:/Users/Honesty/Documents/R/win-library/3.4’
+(as ‘lib’ is unspecified)
+also installing the dependency ‘BH’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.4/BH_1.65.0-1.zip'
+Content type 'application/zip' length 17006683 bytes (16.2 MB)
+downloaded 16.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.4/xml2_1.1.1.zip'
+Content type 'application/zip' length 3529738 bytes (3.4 MB)
+downloaded 3.4 MB
+
+package ‘BH’ successfully unpacked and MD5 sums checked
+package ‘xml2’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Honesty\AppData\Local\Temp\RtmpMn03eX\downloaded_packages
+
+```
+
+Зчитуємо дані
+
+```r
+
+> library(xml2)
+> films <- read_html("http://www.imdb.com/search/title?count=100&release_date=2017,2017&title_type=feature")
+
+```
+
+
